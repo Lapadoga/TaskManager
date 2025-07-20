@@ -4,7 +4,7 @@ import com.example.domain.model.Task
 import java.util.Date
 
 interface TasksRepository {
-    fun getTasksByDate(date: Date): List<Task>
-    fun getUnplannedTasks(): List<Task>
-    fun setTask(task: Task)
+    suspend fun getTasksByDate(date: Date): List<Task>
+    suspend fun getUnplannedTasks(): List<Task>
+    suspend fun setTask(task: Task)
 }
